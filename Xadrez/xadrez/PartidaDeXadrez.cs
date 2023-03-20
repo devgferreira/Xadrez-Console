@@ -73,6 +73,10 @@ namespace xadrez
             {
                 jogadorAtual = Cor.Preta;
             }
+            else
+            {
+                jogadorAtual = Cor.Branca;
+            }
             
         }
 
