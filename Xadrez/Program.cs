@@ -11,16 +11,14 @@ try
         try
         {
             Console.Clear();
-            Tela.imprimirTabuleiro(partida.tab);
-            Console.WriteLine();
-            Console.WriteLine("Turno: " + partida.turno);
-            Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
+            Tela.imprimirPartida(partida);
+           
 
             Console.WriteLine();
             Console.Write("Origem: ");
             Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
             partida.validarPosicaoDeOrigem(origem);
-            // limpar o tab para imprimir com as possiveis posições
+            // limpar o tabuleiro para imprimir com as possiveis posições
             bool[,] posicoesPossiveis = partida.tab.peca(origem).movPossiveis();
             Console.Clear();
             Tela.imprimirTabuleiro(partida.tab, posicoesPossiveis);
