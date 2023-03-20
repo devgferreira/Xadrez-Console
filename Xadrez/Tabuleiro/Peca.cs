@@ -20,6 +20,11 @@
             qteMovimentos++;
         }
 
+        public void decQteMovimentos()
+        {
+            qteMovimentos--;
+        }
+
         public bool existeMovPossiveis()
         {
             bool[,] mat = movPossiveis();
