@@ -12,7 +12,7 @@ try
         {
             Console.Clear();
             Tela.imprimirPartida(partida);
-           
+
 
             Console.WriteLine();
             Console.Write("Origem: ");
@@ -28,17 +28,15 @@ try
             partida.validarPosicaoDeDestino(origem, destino);
             partida.realizaJogada(origem, destino);
         }
-        catch(TabuleiroException ex)
+        catch (TabuleiroException ex)
         {
             Console.WriteLine(ex.Message);
             Console.ReadLine();
         }
-
-
-
     }
 
-    Tela.imprimirTabuleiro(partida.tab);
+    Console.Clear();
+    Tela.imprimirPartida(partida);
 }
 catch (TabuleiroException ex)
 {
